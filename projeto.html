@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: rgb(83, 43, 83);">
+    <button onclick="getUsers()" style="background-color: rgb(146, 114, 146);">TESTE DO BOTAO KKK
+    <h1 class="name"></h1>
+    <p class="username"></p>
+    <p class="email"> </p>
+    <p class="street"></p>
+    <p class="suite"></p>
+    <p class="city"></p>
+    <p class="zipcode"></p>
+    <p class="phone"></p>
+    <p class="website"></p>
+    <p class="company"></p>
+ </button>
+   
+
+    <script> 
+      async function getUsers() {
+        const resp = await fetch("https://jsonplaceholder.typicode.com/users/5")
+        const posts = await resp.json()
+
+        document.querySelector(".name").innerText = posts.name
+        document.querySelector(".username").innerText = posts.username
+        document.querySelector(".email").innerText = posts.email
+        document.querySelector(".street").innerText = posts.address.street
+        document.querySelector(".suite").innerText = posts.address.suite
+        document.querySelector(".city").innerText = posts.address.city
+        document.querySelector(".zipcode").innerText = posts.address.zipcode
+        document.querySelector(".phone").innerText = posts.phone
+        document.querySelector(".website").innerText = posts.website
+        document.querySelector(".website").innerText = posts.company.name
+  
+      }
+    </script>
+</body>
+
+</html>
