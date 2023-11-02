@@ -51,4 +51,44 @@ body{
 .css-user-line{
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgba(209, 209, 209, 0.801);
+ 
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+  
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+
+.input{
+    border: none;
+    border-radius: 5px;
+    background-color:rgba(209, 209, 209, 0.801);
+    height: 25px;
+}
+
+.tips {
+    position: absolute;
+    width: 200px;
+    padding: 16px;
+    bottom: 30px;
+    right: 30px;
+    background-color: white;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    border: 2px solid rgb(104, 225, 255);
+    color:rgb(104, 225, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+
 }
